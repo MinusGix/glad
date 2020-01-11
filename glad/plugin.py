@@ -4,6 +4,7 @@ import pkg_resources
 import glad.specification
 from glad.generator.c import CGenerator
 from glad.generator.rust import RustGenerator
+from glad.generator.cpp import CPPGenerator
 from glad.parse import Specification
 
 logger = logging.getLogger(__name__)
@@ -15,7 +16,8 @@ SPECIFICATION_ENTRY_POINT = 'glad.specification'
 
 DEFAULT_GENERATORS = dict(
     c=CGenerator,
-    rust=RustGenerator
+    rust=RustGenerator,
+    cpp=CPPGenerator
     # TODO fix those
     # d=DGenerator,
     # volt=VoltGenerator
